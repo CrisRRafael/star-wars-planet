@@ -8,12 +8,13 @@ interface IDetailPlanet {
 }
 
 export const DetailPlanet = ({ icon, title, value }: IDetailPlanet) => {
+  console.log(value);
   return (
     <DetailPlanetContainer>
       {icon}
       <div className="text-details">
         <p>{title}:</p>
-        <span>{value}</span>
+        <span>{value ? value : "---"}</span>
       </div>
     </DetailPlanetContainer>
   );

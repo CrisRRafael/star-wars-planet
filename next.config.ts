@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["cryptospro.com.br"],
   },
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;

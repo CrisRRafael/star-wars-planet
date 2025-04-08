@@ -39,8 +39,8 @@ export const WrapperSearchPlanet = styled.div`
   }
 
   .wrapper-spaceship {
-    width: 462;
-    height: 328;
+    width: 462px;
+    height: 328px;
 
     bottom: -150px;
     left: -120px;
@@ -54,7 +54,7 @@ export const WrapperSearchPlanet = styled.div`
       height: 229px;
 
       bottom: 232px;
-      left: 60px;
+      left: 80px;
     }
   }
 `;

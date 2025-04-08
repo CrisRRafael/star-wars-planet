@@ -10,4 +10,10 @@ export const SectionPlanetsContainer = styled.div`
   margin-bottom: 60px;
 
   min-height: calc(100vh - 82px);
+
+  width: 100%;
+
+  @media (max-width: 501px) {
+    overflow: hidden;
+  }
 `;
