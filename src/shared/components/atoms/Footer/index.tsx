@@ -1,5 +1,6 @@
-import { StarWars } from "@/src/shared/assets/StarWars";
 import { FooterContainer } from "./styles";
+import StarWars from "../../../assets/StarWars.png";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer = () => {
         </p>
       </div>
       <div className="logo-star-wars">
-        <StarWars />
+        <Image src={StarWars} alt="Logo Star Wars" />
       </div>
     </FooterContainer>
   );

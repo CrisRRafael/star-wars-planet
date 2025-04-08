@@ -8,4 +8,6 @@ export const SectionPlanetsContainer = styled.div`
 
   gap: 60px;
   margin-bottom: 60px;
+
+  min-height: calc(100vh - 82px);
 `;

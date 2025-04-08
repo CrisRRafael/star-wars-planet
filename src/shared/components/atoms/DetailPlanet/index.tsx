@@ -4,7 +4,7 @@ import { DetailPlanetContainer } from "./styles";
 interface IDetailPlanet {
   icon: ReactElement;
   title: string;
-  value: string;
+  value: string | undefined;
 }
 
 export const DetailPlanet = ({ icon, title, value }: IDetailPlanet) => {

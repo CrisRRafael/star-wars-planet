@@ -3,7 +3,7 @@ import { Planet } from "../shared/components/atoms/InputSearch";
 export const usePlanetsService = () => {
   const searchPlanetsRequest = async (search: string) => {
     const response = await fetch(
-      `https://swapi.dev/api/planets/?searchs=${search}`
+      `https://swapi.dev/api/planets/?search=${search}`
     );
 
     return await response.json();
@@ -38,9 +38,27 @@ export const usePlanetsService = () => {
     return filtered;
   };
 
+  const getPlanetResidents = async (
+    residentUrls: string[]
+  ): Promise<string[]> => {
+    const data = await Promise.all(
+      residentUrls.map((url) => fetch(url).then((res) => res.json()))
+    );
+    return data.map((res) => res.name);
+  };
+
+  const getPlanetFilms = async (filmUrls: string[]): Promise<string[]> => {
+    const data = await Promise.all(
+      filmUrls.map((url) => fetch(url).then((res) => res.json()))
+    );
+    return data.map((film) => film.title);
+  };
+
   return {
     searchPlanetsRequest,
     searchPlanetsByPopulation,
+    getPlanetResidents,
+    getPlanetFilms,
   };
 };
 

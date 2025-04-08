@@ -1,10 +1,12 @@
-import { StarWarsPlanetSearch } from "@/src/shared/assets/StarWarsPlanetSearch";
+import StarWarsTitle from "@/src/shared/assets/StarWarsTitle.png";
+
 import { PlanetSearchLogoContainer } from "./styles";
+import Image from "next/image";
 
 export const StarWarsPlanetSearchLogo = () => {
   return (
     <PlanetSearchLogoContainer>
-      <StarWarsPlanetSearch className="star-wars-logo-center" />
+      <Image src={StarWarsTitle} alt="logo Star Wars title " />
     </PlanetSearchLogoContainer>
   );
 };

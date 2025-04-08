@@ -8,10 +8,10 @@ const spin = keyframes`
 
 export const Loader = styled.div`
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #4f46e5;
+  border-left-color: #909090;
   border-radius: 50%;
   animation: ${spin} 1s linear infinite;
 `;

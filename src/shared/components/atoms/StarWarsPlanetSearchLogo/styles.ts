@@ -9,7 +9,7 @@ export const PlanetSearchLogoContainer = styled.div`
     height: 117px;
   }
 
-  .star-wars-logo-center {
+  img {
     @media (max-width: 900px) {
       width: 209px;
       height: 117px;

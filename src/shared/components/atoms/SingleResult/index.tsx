@@ -1,6 +1,7 @@
 import { ContainerSinglePlanet } from "./styles";
 import { Planet } from "../../atoms/InputSearch";
 import { useRouter } from "next/router";
+import { usePlanetSearchContext } from "@/src/hooks/usePlanetsSearchContext";
 
 type PlanetProps = {
   planet: Planet;
@@ -9,7 +10,9 @@ type PlanetProps = {
 const SingleResult = ({ planet }: PlanetProps) => {
   const { push } = useRouter();
 
+  const { setPlanet } = usePlanetSearchContext();
   const handleClick = () => {
+    setPlanet(planet);
     push(`/planet/${planet.name}`);
   };
 

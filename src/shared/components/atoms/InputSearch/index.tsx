@@ -37,6 +37,7 @@ export const InputSearch = () => {
 
   const [results, setResults] = useState<Planet[]>([]);
   const [showResults, setShowResults] = useState<boolean>(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     changeSearch(e.target.value);
@@ -76,7 +77,11 @@ export const InputSearch = () => {
           placeholder="Enter the name in the planet"
           onChange={handleChange}
           value={search}
-          onFocus={() => setShowResults(false)}
+          onFocus={() => {
+            setIsFocused(true);
+            setShowResults(false);
+          }}
+          onBlur={() => setIsFocused(false)}
         />
         {!!search && (
           <div className="clear-search" onClick={handleClear}>
@@ -84,6 +89,9 @@ export const InputSearch = () => {
           </div>
         )}
       </ContentInputSearch>
+      {isFocused && !searchType && (
+        <span className="alert-filter"> Escolha uma opção de filtro</span>
+      )}
       {showResults && <ListPlanets planets={results} />}
 
       <ButtonSearch

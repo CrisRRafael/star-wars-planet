@@ -10,6 +10,11 @@ export const ContainerInputSearch = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  .alert-filter {
+    font: 400 12px/100% Lato;
+    color: #de1212 !important;
+  }
 `;
 
 export const ContentInputSearch = styled.div`

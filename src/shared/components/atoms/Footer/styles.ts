@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  background: #ffffff;
+  /* background: #ffffff;
   width: 100%;
 
   padding: 1.5rem;
@@ -10,9 +10,15 @@ export const FooterContainer = styled.div`
   justify-content: center;
   justify-content: center;
 
-  position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+
+  padding: 20px 0;
 
   .copyright {
     display: flex;
